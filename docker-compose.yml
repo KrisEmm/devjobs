@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  database:
+    container_name: devjobs-db
+    image: mongo:4.4.5-bionic
+    environment: 
+        MONGO_INITDB_DATABASE: devjobs
+    volumes:
+      - ~/docker/db/devjobs/v1.0/mongo:/data/db
+    ports: 
+      - "27017:27017"
+  server:
+    container_name: devjobs-app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "3000:3000"
+    links: 
+      - database
+    depends_on: 
+      - database
+    environment:
+      WAIT_HOSTS: database:27017
+      WAIT_BEFORE: 60
+      WAIT_SLEEP_INTERVAL: 60
+      WAIT_HOST_CONNECT_TIMEOUT: 30
