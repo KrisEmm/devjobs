@@ -27,7 +27,7 @@ This project you can publish job offers and apply to them.
 
 ##### `docker-compose up -d`
 
-##### `docker logs --follow container`
+##### `docker logs --follow devjobs-app`
 * Wait the database is connected
 
 ##### `visit into browser http:\\localhost:3000/`
