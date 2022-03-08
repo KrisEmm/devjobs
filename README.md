@@ -2,7 +2,7 @@
 
 ![devjobs](https://krisemm.github.io/krisemm-portfolio/assets/images/projects/devjobs.png "devjobs")
 
-##### This project is hosted on [Digital Ocean](https://www.devjobs.krisemm.xyz/).
+##### This project is hosted on [Digital Ocean](http://devjobs.krisemm.xyz/).
 
 ## Description
 
